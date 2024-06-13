@@ -21,11 +21,15 @@
 
     user-select: none;
 } */
-
-.content {
-
+* {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
+}
+
+body {
+
+
     justify-content: center;
     align-items: center;
     min-height: 100vh;
@@ -33,12 +37,30 @@
     /* background-image: url('./imgs/bg0.png');*/
     /*     background-image: url('./bgImg.jpg'); */
     background-image: url('./imgs/bgFinal.png');
+    background-image: url('./imgs/bgCyberP.jpg');
     background-repeat: no-repeat;
     font-family: initial;
     /* font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; */
     width: 100%;
     background-size: cover;
     background-attachment: fixed;
+    color: rgb(255, 255, 237);
+
+
+
+}
+
+.content {
+
+
+    justify-content: center;
+    align-items: center;
+
+    /* background-image: url('./imgs/bg0.png');*/
+    /*     background-image: url('./bgImg.jpg'); */
+
+    /* font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; */
+
     color: rgb(255, 255, 237);
 
 
@@ -196,9 +218,9 @@ h1 {
         /* background-image: url('./bgImg.jpg'); */
         /* background-image: url('./imgs/BGPhoneImg.jpg'); */
         /* background-image: url('./imgs/bgFinal.png'); */
-        background-image: url('./imgs/mobileBG.png');
+        /* background-image: url('./imgs/mobileBG.png');
         /* background-image: url('https://wallpapers-clan.com/wp-content/uploads/2023/06/cyberpunk-city-abstract-wallpaper.jpg'); */
-        /* background-image: url('./imgs/techBG.webp'); */
+        /* background-image: url('./imgs/bgCyberP.jpg'); */
 
 
     }
@@ -241,10 +263,11 @@ h1 {
     }
 
     #headnave {
-        background-color: rgb(1, 38, 75);
+        background-color: rgb(52, 1, 75);
         backdrop-filter: blur(50px);
-        box-shadow: 0px 0px 10px 10px rgba(95, 95, 95, 0.5);
-        width: 7em;
+        box-shadow: 0px 10px 10px rgba(95, 95, 95, 0.5);
+
+        width: 7.5em;
         border-radius: 15%;
         border: 10em;
 

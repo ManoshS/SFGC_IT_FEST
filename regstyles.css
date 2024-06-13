@@ -17,7 +17,7 @@ body {
     background-repeat: no-repeat;
     height: 100vh;
 
-    
+
     min-height: 100vh;
     background-position: center;
     width: 100%;
@@ -163,4 +163,8 @@ textarea {
     max-width: 500px;
     margin: 0px 10px;
     padding: 10px;
+}
+
+#whatsappReg {
+    display: none;
 }

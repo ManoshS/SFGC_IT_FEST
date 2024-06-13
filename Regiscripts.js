@@ -120,14 +120,20 @@ function register() {
                         .then(data => {
                             document.getElementById('loader').style.display = 'none';
                             alert("Registred Successfuly ")
-                            window.location.href = "./index.html";
+                            //window.location.href = "./index.html";
+                            document.getElementById("reg2").style.display = "none"
+                            document.getElementById("whatsappReg").style.display = "block"
+                            whatsappQR(postData);
                             console.log('Data:', data);
 
                         })
                         .catch(error => {
                             document.getElementById('loader').style.display = 'none';
                             alert("Registred Successfuly ")
-                            window.location.href = "./index.html";
+                            document.getElementById("reg2").style.display = "none"
+                            document.getElementById("whatsappReg").style.display = "block"
+                            whatsappQR(postData);
+                            //window.location.href = "./index.html";
                             console.error('There has been a problem with your fetch operation in PUT:', error);
                         });
 
@@ -163,14 +169,20 @@ function register() {
                         .then(da => {
                             document.getElementById('loader1').style.display = 'none';
                             alert("Registred Successfuly")
-                            window.location.href = "./index.html";
+                            document.getElementById("reg2").style.display = "none"
+                            document.getElementById("whatsappReg").style.display = "block"
+                            whatsappQR(postData);
+                            // window.location.href = "./index.html";
                             console.log('Data:', da);
 
                         })
                         .catch(error => {
                             document.getElementById('loader1').style.display = 'none';
                             alert("Registred Successfuly")
-                            window.location.href = "./index.html";
+                            document.getElementById("reg2").style.display = "none"
+                            document.getElementById("whatsappReg").style.display = "block"
+                            whatsappQR(postData);
+                            // window.location.href = "./index.html";
                             console.error('There has been a problem with your fetch operation in POST: at', postApiUrl, error);
                         });
                 });
@@ -212,4 +224,34 @@ function traverseCheck(data, target) {
 
     }
     return temp;
+}
+
+function whatsappQR(postData) {
+    // document.getElementById("QR").src = "./imgs/UPIimg.jpg"
+    if (postData.competition === "coding")
+        document.getElementById("QR").src = "./imgs/codingQR.jpg"
+    else if (postData.competition === "quiz")
+        document.getElementById("QR").src = "./imgs/quizQR.jpg"
+    else if (postData.competition === "debate")
+        document.getElementById("QR").src = "./imgs/debateQR.jpg"
+    else if (postData.competition === "mathsPPT")
+        document.getElementById("QR").src = "./imgs/mathsPPTQR.jpg"
+    else if (postData.competition === "electronicsPPT")
+        document.getElementById("QR").src = "./imgs/electronicsPPTQR.jpg"
+    else if (postData.competition === "rubiksCube")
+        document.getElementById("QR").src = "./imgs/rubiksCubeQR.jpg"
+    else if (postData.competition === "ECA")
+        document.getElementById("QR").src = "./imgs/ECAQR.jpg"
+    else if (postData.competition === "videography")
+        document.getElementById("QR").src = "./imgs/videographyQR.jpg"
+    else if (postData.competition === "sudoku")
+        document.getElementById("QR").src = "./imgs/sudokuQR.jpg"
+    else if (postData.competition === "treasurHunt")
+        document.getElementById("QR").src = "./imgs/treasurHuntQR.jpg"
+    else if (postData.competition === "gaming")
+        document.getElementById("QR").src = "./imgs/gamingQR.jpg"
+    else if (postData.competition === "fashionWalk")
+        document.getElementById("QR").src = "./imgs/fashionWalkQR.jpg"
+    else if (postData.competition === "logoDesigne")
+        document.getElementById("QR").src = "./imgs/logoDesigneQR.jpg"
 }
