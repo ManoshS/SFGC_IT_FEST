@@ -1,7 +1,6 @@
-
-                           //window.location.href = "https://forms.gle/cwQcn2FYhTpFb54w9";
-
+//window.location.href = "https://forms.gle/cwQcn2FYhTpFb54w9";
 document.getElementById('loader').style.display = 'none';
+
 let jsondata = {}
 let url = ""
 
@@ -67,6 +66,7 @@ function register() {
         postApiUrl += "rubiksCube"
     else if (postData.competition === "ECA")
         postApiUrl += "ECA"
+  alert("Processing your Request")
     document.getElementById('loader').style.display = "block";
     fetch(postApiUrl)
         .then(response => {
@@ -122,10 +122,12 @@ function register() {
                         })
                         .then(data => {
                             document.getElementById('loader').style.display = 'none';
-                            alert("Registred Successfuly ")
+                            
                             //window.location.href = "./index.html";
                             document.getElementById("reg2").style.display = "none"
+                          alert("Registred Successfuly ")
                             document.getElementById("whatsappReg").style.display = "block"
+                          
                             whatsappQR(postData);
                             console.log('Data:', data);
 
